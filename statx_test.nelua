@@ -1,0 +1,9 @@
+local statx = require "statx"
+local ok, stat, res = statx.stat("statx_test.nelua")
+if not ok then
+	print("error")
+	return res
+end
+
+print("statx_test.nelua")
+print(stat.stx_size, "bytes")
